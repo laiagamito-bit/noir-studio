@@ -1,0 +1,87 @@
+
+/* CARDS GRID */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 0 30px;
+
+    box-sizing: border-box;
+}
+
+/* INDIVIDUAL CARDS */
+.week-card {
+    width: 100%;
+    background-color: #d6d5d0;
+    border: 1px solid #b8b7b2;
+    padding: 15px;
+    box-sizing: border-box;
+
+    transition: all 0.4s ease;
+}
+
+.week-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #888780;
+}
+
+/* IMAGE */
+.week-card-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.week-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.week-card:hover .week-card-image img {
+    transform: scale(1.04);
+}
+
+/* CONTENT */
+.week-card-content {
+    padding: 20px 10px 15px;
+    border-top: 1px solid #aaa9a3;
+}
+
+.week-card-category {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.week-card-content h2 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+    margin: 18px 0 10px;
+}
+
+.week-card-content p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 800px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
